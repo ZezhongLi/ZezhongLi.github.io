@@ -1,0 +1,141 @@
+:root {
+    --steel: #7d97ad;
+    box-sizing: border-box;
+    margin: 1em;
+}
+
+header {
+    text-align: center;
+}
+
+.container {
+    margin: 1em;
+}
+
+.circular-image {
+    border-radius:  50%;
+}
+
+.titles {
+    display: block;
+    list-style: none;
+    padding-left: 0;
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+main {
+    border-top: 5px solid var(--steel);
+    margin-top: 2em;
+}
+
+/*   works   */
+
+.work-container {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-container li {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2em;
+    padding: 1em;
+    width: 85%;
+}
+
+img.thumb {
+    width: 15%; 
+    height: 15%;
+}
+
+img.logo {
+    width: 50%;
+    border-radius:  10%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 10px;
+    border-top: 5px solid var(--steel);
+}
+
+.contacts li {
+    flex: 0 1 30%;
+    text-align: center;
+}
+
+.contact {
+    height: 80px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.contact-img {
+    height: 80%;
+    width: auto;
+    object-fit: scale-down;
+}
+
+.contact-title {
+    height: 20%;
+    width: auto;
+    padding-top: 5px;
+}
+
+@media (min-width: 650px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+    .name-title {
+        flex: 1;
+        text-align: right;
+    }
+
+    .work-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .work-container li {
+        max-width: 30%;
+        object-fit: scale-down;
+    }
+}
+
+@media (min-width: 1000px) {
+    .contacts {
+        order: 1;
+        flex-direction: column;
+        border-top: 0;
+    }
+
+    .container {
+        order: 2;
+        padding-left: 3em;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3em;
+    }
+}
